@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+venv/
+
+# Test cache
+.pytest_cache/
+.coverage
+
+# IDE
+.idea/
+.vscode/
+
+# Generated reports (created by 'eda-cli report' command)
+reports*/*
+!reports*/.gitkeep
+*.png
+!data/*.png
+
+# uv lock file (optional)
+uv.lock

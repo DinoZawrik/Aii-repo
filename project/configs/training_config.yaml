@@ -1,0 +1,45 @@
+# Training Configuration
+# Sentiment Analysis Project
+
+# Experiment Settings
+experiment:
+  name: sentiment_analysis
+  seed: 42
+
+# Data Settings
+data:
+  path: data/sentiment_data.csv
+  text_column: text
+  label_column: label
+  test_size: 0.2
+  val_size: 0.1
+
+# Baseline Training
+baseline:
+  enabled: true
+  algorithms:
+    - logistic_regression
+    - random_forest
+  save_path: artifacts/models/
+
+# Transformer Training
+transformer:
+  enabled: false  # Requires GPU for efficient training
+  model_name: distilbert-base-uncased
+  epochs: 3
+  batch_size: 16
+  learning_rate: 2.0e-5
+  save_path: artifacts/models/transformer/
+
+# Evaluation Metrics
+metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1
+
+# Output Settings
+output:
+  models_dir: artifacts/models/
+  reports_dir: artifacts/reports/
+  logs_dir: artifacts/logs/

@@ -1,24 +1,41 @@
 # Тесты проекта
 
-В эту папку можно добавлять **тесты**:
+## Структура тестов
 
-- модульные тесты для функций и классов из `src/`;
-- простые проверки корректности работы пайплайнов;
-- sanity-check тесты (например, размеры матриц, наличие нужных колонок в данных и т.п.).
+```
+tests/
+├── __init__.py           # Описание тест-пакета
+├── conftest.py           # Pytest fixtures
+├── test_preprocessor.py  # Тесты предобработки текста
+├── test_models.py        # Тесты ML моделей
+└── test_api.py           # Тесты FastAPI endpoints
+```
 
-Рекомендуемый вариант — использовать `pytest`:
-
-- файлы тестов называть в формате:
-  - `test_*.py`, например:
-    - `test_data_loading.py`
-    - `test_model_training.py`
-- размещать рядом с тестируемым функционалом логично сгруппированные тесты.
-
-Команда запуска тестов (пример — укажите её в `project/README.md`):
+## Запуск тестов
 
 ```bash
 cd project
-pytest tests
+
+# Все тесты
+pytest tests/ -v
+
+# С покрытием
+pytest tests/ --cov=src --cov-report=html
+
+# Конкретный файл
+pytest tests/test_models.py -v
 ```
 
-Наличие даже простых тестов поможет избежать «ломающих» изменений перед защитой.
+## Описание тестов
+
+### test_preprocessor.py
+- Тесты `TextPreprocessor`: lowercase, удаление URL/email/пунктуации
+- Тесты `TfidfFeatureExtractor`: fit, transform, fit_transform
+
+### test_models.py
+- Тесты `BaselineModel`: инициализация, train, predict, evaluate, save/load
+- Поддержка LogisticRegression и RandomForest
+
+### test_api.py
+- Тесты endpoints: `/`, `/health`, `/predict`, `/predict/batch`
+- Валидация request/response схем

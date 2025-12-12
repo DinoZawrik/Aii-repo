@@ -1,23 +1,45 @@
 # Исходный код проекта
 
-В этой папке размещается **основной код проекта**, который используется для:
+## Структура модулей
 
-- подготовки данных;
-- обучения моделей;
-- инференса (получения предсказаний);
-- запуска сервисов (API/CLI/скриптов).
+```
+src/
+├── __init__.py           # Главный модуль проекта
+├── data/                 # Работа с данными
+│   ├── loader.py         # Загрузка датасетов (CSV, train/test split)
+│   └── preprocessor.py   # Предобработка текстов + TF-IDF
+├── models/               # ML модели
+│   ├── baseline.py       # LogisticRegression, RandomForest
+│   └── transformer.py    # DistilBERT для sentiment analysis
+├── training/             # Обучение
+│   └── train.py          # Pipeline обучения + CLI
+├── service/              # API
+│   └── app.py            # FastAPI приложение
+└── utils/                # Утилиты
+    ├── config.py         # Конфигурация из .env
+    └── logging_config.py # Structlog логирование
+```
 
-Примеры того, как можно организовать код (не обязательно строго так, но рекомендуется):
+## Команды запуска
 
-- `src/data/` — загрузка и подготовка данных;
-- `src/features/` — генерация и трансформация признаков;
-- `src/models/` — обучение и применение моделей;
-- `src/service/` — запуск сервиса (например, FastAPI/Flask);
-- `src/utils/` — вспомогательные функции.
+### Обучение модели
+```bash
+python -m src.training.train --model-type baseline --data-file sentiment_data.csv
+```
 
-Точки входа (скрипты, которые вы запускаете из командной строки), удобно оформлять как:
+### Запуск API
+```bash
+python -m src.service.app
+```
 
-- модули: `python -m src.train`, `python -m src.service`;
-- или скрипты в корне `src/`, например `src/train.py`, `src/service.py`.
+## Основные классы
 
-Опишите основные команды запуска в файле `project/README.md`.
+| Модуль | Класс | Описание |
+|--------|-------|----------|
+| `data.loader` | `DataLoader` | Загрузка CSV, train/test split |
+| `data.preprocessor` | `TextPreprocessor` | Очистка текста |
+| `data.preprocessor` | `TfidfFeatureExtractor` | TF-IDF векторизация |
+| `models.baseline` | `BaselineModel` | Sklearn классификаторы |
+| `models.transformer` | `TransformerModel` | HuggingFace модели |
+| `training.train` | `TrainingPipeline` | Pipeline обучения |
+| `utils.config` | `Config` | Конфигурация |

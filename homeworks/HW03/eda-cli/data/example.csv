@@ -1,0 +1,51 @@
+id,name,age,salary,department,performance_score,years_experience,city,status
+1,Alice Johnson,28,55000,Engineering,4.5,3,New York,active
+2,Bob Smith,35,72000,Sales,4.2,8,San Francisco,active
+3,Carol Williams,42,89000,Engineering,4.8,15,Austin,active
+4,David Brown,31,61000,Marketing,3.9,5,New York,active
+5,Eve Davis,29,58000,Sales,4.1,4,Chicago,active
+6,Frank Miller,45,95000,Engineering,4.9,20,San Francisco,active
+7,Grace Wilson,33,68000,Marketing,4.3,7,Austin,active
+8,Henry Moore,27,52000,Sales,3.8,2,New York,active
+9,Ivy Taylor,38,79000,Engineering,4.6,12,Chicago,active
+10,Jack Anderson,41,86000,Marketing,4.7,16,San Francisco,active
+11,Kate Thomas,30,63000,Sales,4.0,6,Austin,active
+12,Leo Jackson,36,71000,Engineering,4.4,9,New York,active
+13,Mary White,44,92000,Marketing,4.8,18,Chicago,active
+14,Nathan Harris,32,66000,Sales,4.2,7,San Francisco,active
+15,Olivia Martin,26,49000,Engineering,3.7,1,Austin,active
+16,Paul Thompson,39,81000,Marketing,4.5,13,New York,active
+17,Quinn Garcia,34,69000,Sales,4.1,8,Chicago,active
+18,Rachel Martinez,43,88000,Engineering,4.7,17,San Francisco,active
+19,Sam Robinson,29,57000,Marketing,3.9,4,Austin,active
+20,Tina Clark,37,76000,Sales,4.4,11,New York,active
+21,Uma Rodriguez,40,83000,Engineering,4.6,14,Chicago,active
+22,Victor Lewis,31,64000,Marketing,4.0,6,San Francisco,active
+23,Wendy Lee,28,56000,Sales,3.8,3,Austin,active
+24,Xander Walker,46,97000,Engineering,4.9,21,New York,active
+25,Yara Hall,33,67000,Marketing,4.2,7,Chicago,active
+26,Zack Allen,35,73000,Sales,4.3,9,San Francisco,active
+27,Amy Young,27,51000,Engineering,3.6,2,Austin,active
+28,Brian King,41,85000,Marketing,4.6,15,New York,active
+29,Chloe Wright,38,78000,Sales,4.4,12,Chicago,active
+30,Daniel Lopez,32,65000,Engineering,4.1,6,San Francisco,active
+31,Emma Hill,29,,Sales,4.0,4,Austin,active
+32,Felix Scott,36,74000,Marketing,4.3,10,New York,active
+33,Gina Green,44,91000,Engineering,,19,Chicago,active
+34,Hugo Adams,30,62000,Sales,4.1,5,San Francisco,active
+35,Iris Baker,25,47000,Marketing,3.5,1,Austin,active
+36,James Nelson,39,80000,Engineering,4.5,13,New York,active
+37,Kelly Carter,34,70000,Sales,4.2,8,Chicago,active
+38,Luke Mitchell,42,87000,Marketing,4.7,16,San Francisco,active
+39,Megan Perez,28,,Engineering,3.9,3,Austin,active
+40,Noah Roberts,37,77000,Sales,4.4,11,New York,active
+41,Oscar Turner,45,94000,Marketing,4.8,20,Chicago,active
+42,Piper Phillips,31,64000,Engineering,4.0,6,San Francisco,active
+43,Quinn Campbell,33,68000,Sales,4.2,7,Austin,active
+44,Riley Parker,40,82000,Marketing,4.5,14,New York,active
+45,Sophie Evans,26,50000,Engineering,3.7,2,Chicago,active
+46,Tyler Edwards,38,79000,Sales,4.3,12,San Francisco,active
+47,Una Collins,35,72000,Marketing,4.1,9,Austin,active
+48,Victor Stewart,43,89000,Engineering,4.6,17,New York,active
+49,Willow Sanchez,29,58000,Sales,3.9,4,Chicago,active
+50,Xander Morris,41,84000,Marketing,4.7,15,San Francisco,active
